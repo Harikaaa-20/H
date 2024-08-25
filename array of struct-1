@@ -26,3 +26,22 @@ int main() {
     }
     return 0;
 }
+
+
+OUTPUT:
+Enter how many records you want to store: 2
+
+Enter 1 record:
+Enter Name: h
+Enter RollNo.: 9
+Enter CPI: 8
+
+Enter 2 record:
+Enter Name: k
+Enter RollNo.: 7
+Enter CPI: 6
+
+	Name		RollNo		CPI
+	h		9		8
+	k		7		6
+

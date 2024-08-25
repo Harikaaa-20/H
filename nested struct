@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+struct Address {
+    char HouseNo[25];
+    char City[25];
+    char PinCode[25];
+};
+struct Student {
+    char name[25];
+    int roll;
+    float cpi;
+    Address Add;
+};
+int main() {
+    Student s;
+    cout << "\n\tEnter Student Name: ";
+    cin >> s.name;
+    cout << "\n\tEnter Student Roll Number: ";
+    cin >> s.roll;
+    cout << "\n\tEnter Student CPI: ";
+    cin >> s.cpi;
+    cout << "\n\tEnter Student House No: ";
+    cin >> s.Add.HouseNo;
+    cout << "\n\tEnter Student City: ";
+    cin >> s.Add.City;
+    cout << "\n\tEnter Student Pincode: ";
+    cin >> s.Add.PinCode;
+    cout << "\nDetails of Student:";
+    cout << "\n\tStudent Name: " << s.name;
+    cout << "\n\tStudent Roll Number: " << s.roll;
+    cout << "\n\tStudent CPI: " << s.cpi;
+    cout << "\n\tStudent House No: " << s.Add.HouseNo;
+    cout << "\n\tStudent City: " << s.Add.City;
+    cout << "\n\tStudent Pincode: " << s.Add.PinCode << endl;
+    return 0;
+}

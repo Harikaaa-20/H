@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+struct Time {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+int main() {
+    Time t1, t2;
+    int h, m, s;
+
+    // 1st time
+    cout << "Enter 1st time." << endl;
+
+    cout << "Enter Hours: ";
+    cin >> t1.hours;
+
+    cout << "Enter Minutes: ";
+    cin >> t1.minutes;
+
+    cout << "Enter Seconds: ";
+    cin >> t1.seconds;
+
+    cout << "The Time is " << t1.hours << ":" << t1.minutes << ":" << t1.seconds << endl;
+
+    // 2nd time
+    cout << "\nEnter the 2nd time." << endl;
+
+    cout << "Enter Hours: ";
+    cin >> t2.hours;
+
+    cout << "Enter Minutes: ";
+    cin >> t2.minutes;
+
+    cout << "Enter Seconds: ";
+    cin >> t2.seconds;
+
+    cout << "The Time is " << t2.hours << ":" << t2.minutes << ":" << t2.seconds << endl;
+
+    // Sum of the times
+    h = t1.hours + t2.hours;
+    m = t1.minutes + t2.minutes;
+    s = t1.seconds + t2.seconds;
+
+    cout << "\nSum of the two times is " << h << ":" << m << ":" << s << endl;
+
+    return 0;
+}

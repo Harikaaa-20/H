@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+struct Student
+{
+    char name[40];  // Student name
+    int roll;       // Student roll number
+    float CPI;      // Student CPI
+    int backlog;    // Student backlog
+};
+
+int main()
+{
+    Student student1;  // Simple structure variable
+
+    // Input data in structure members using dot operator
+    cout << "Enter Student Name: ";
+    cin >> student1.name;
+
+    cout << "Enter Student Roll Number: ";
+    cin >> student1.roll;
+
+    cout << "Enter Student CPI: ";
+    cin >> student1.CPI;
+
+    cout << "Enter Student Backlog: ";
+    cin >> student1.backlog;
+
+    // Display data in structure members using dot operator
+    cout << "\nStudent using simple structure variable." << endl;
+    cout << "Student name: " << student1.name << endl;
+    cout << "Student Enrollment: " << student1.roll << endl;
+    cout << "Student CPI: " << student1.CPI << endl;
+    cout << "Student Backlog: " << student1.backlog << endl;
+
+    return 0;
+}

@@ -1,5 +1,5 @@
-#include <stdio.h>
-
+#include <iostream>
+using namespace std
 struct node {
     int data1;
     char data2;

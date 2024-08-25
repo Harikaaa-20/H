@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+struct Student {
+    char name[20];
+    int rollno;
+    float cpi;
+};
+int main() {
+    int i, n;
+    cout << "Enter how many records you want to store: ";
+    cin >> n;
+    Student sarr[n]; // Array of structures
+    for (i = 0; i < n; i++) {
+        cout << "\nEnter " << i + 1 << " record:" << endl;
+        cout << "Enter Name: ";
+        cin >> sarr[i].name;
+        cout << "Enter RollNo.: ";
+        cin >> sarr[i].rollno;
+        cout << "Enter CPI: ";
+        cin >> sarr[i].cpi;
+    }
+    cout << "\n\tName\t\tRollNo\t\tCPI" << endl;
+    for (i = 0; i < n; i++) {
+        cout << "\t" << sarr[i].name << "\t\t" << sarr[i].rollno << "\t\t" << sarr[i].cpi << endl;
+    }
+    return 0;
+}

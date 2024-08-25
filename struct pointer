@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+struct Student {
+    char name[20];
+    int rollno;
+    float cpi;
+};
+int main() {
+    Student *studPtr, stud1;
+    // Pointer points to the address of stud1
+    studPtr = &stud1;
+    // Input student details using pointer
+    cout << "Enter Name: ";
+    cin >> studPtr->name;
+    cout << "Enter RollNo: ";
+    cin >> studPtr->rollno;
+    cout << "Enter CPI: ";
+    cin >> studPtr->cpi;
+    // Output student details using pointer
+    cout << "\nStudent Details:\n";
+    cout << "Name: " << studPtr->name << endl;
+    cout << "RollNo: " << studPtr->rollno << endl;
+    cout << "CPI: " << studPtr->cpi << endl;
+    return 0;
+}

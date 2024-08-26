@@ -1,0 +1,139 @@
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node *next;
+    Node *prev;
+    Node(int data) : data(data), next(nullptr), prev(nullptr) {}
+};
+
+class MyClan {
+public:
+    // Insert at the beginning of the list
+    void insertAtBeginning(Node *&head, int data) {
+        Node *newNode = new Node(data); // Create a new node
+        newNode->next = head;           // Link new node to the head
+        if (head != nullptr) {
+            head->prev = newNode;       // Set the previous of old head to new node
+        }
+        head = newNode;                 // Update head to the new node
+    }
+
+    // Insert at the end of the list
+    void insertAtEnd(Node *&head, int data) {
+        Node *newNode = new Node(data); // Create a new node
+        newNode->next = nullptr;        // Set next to nullptr as it's the last node
+
+        if (head == nullptr) {
+            head = newNode;            // If the list is empty, the new node is the head
+        } else {
+            Node *ptr = head;
+            while (ptr->next != nullptr) {
+                ptr = ptr->next;       // Traverse to the end of the list
+            }
+            ptr->next = newNode;       // Link the last node to the new node
+            newNode->prev = ptr;       // Set the previous of new node to the old last node
+        }
+    }
+
+    // Insert at a specific position in the list
+    void insertAtPosition(Node *&head, int pos, int data) {
+        Node *newNode = new Node(data); // Create a new node
+
+        if (pos == 1) {
+            newNode->next = head;       // If position is 1, insert at the beginning
+            if (head != nullptr) {
+                head->prev = newNode;
+            }
+            head = newNode;
+        } else {
+            Node *ptr = head;
+            for (int i = 1; i < pos - 1 && ptr != nullptr; i++) {
+                ptr = ptr->next;        // Traverse to the node just before the position
+            }
+
+            if (ptr != nullptr) {
+                newNode->next = ptr->next; // Link new node to the next node
+                newNode->prev = ptr;       // Link previous node to the new node
+                if (ptr->next != nullptr) {
+                    ptr->next->prev = newNode; // Set previous of next node to new node
+                }
+                ptr->next = newNode;       // Link previous node to the new node
+            } else {
+                cout << "Position out of range" << endl;
+            }
+        }
+    }
+
+    // Delete a node by value
+    void deleteNode(Node *&head, int value) {
+        Node *temp = head;
+
+        // Traverse the list to find the node to delete
+        while (temp != nullptr && temp->data != value) {
+            temp = temp->next;
+        }
+    }
+
+    // Print the list
+    void printList(Node *head) const {
+        Node *ptr = head;
+        while (ptr != nullptr) {
+            cout << ptr->data << " ";  // Print data of each node
+            ptr = ptr->next;           // Move to the next node
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    MyClan obj;
+    Node *head = nullptr;
+    int data, pos, choice;
+
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Insert at Beginning\n";
+        cout << "2. Insert at End\n";
+        cout << "3. Insert at Position\n";
+        cout << "4. Delete by Value\n";
+        cout << "5. Print List\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter value to insert at the beginning: ";
+                cin >> data;
+                obj.insertAtBeginning(head, data);
+                break;
+            case 2:
+                cout << "Enter value to insert at the end: ";
+                cin >> data;
+                obj.insertAtEnd(head, data);
+                break;
+            case 3:
+                cout << "Enter position and value to insert: ";
+                cin >> pos >> data;
+                obj.insertAtPosition(head, pos, data);
+                break;
+            case 4:
+                cout << "Enter value to delete: ";
+                cin >> data;
+                obj.deleteNode(head, data);
+                break;
+            case 5:
+                obj.printList(head);
+                break;
+            case 6:
+                cout << "Exiting..." << endl;
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
+        }
+    } while (choice != 6);
+
+    return 0;
+}

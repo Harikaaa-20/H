@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandra Harika's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: #fff;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #4A90E2;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            padding: 10px;
+            transition: background 0.3s;
+        }
+        .sidebar ul li a:hover {
+            background: #4A90E2;
+            border-radius: 5px;
+        }
+        .container {
+            margin-left: 270px;
+            padding: 20px;
+            width: calc(100% - 270px);
+        }
+        header h1 {
+            font-size: 3em;
+            color: #4A90E2;
+            text-align: center;
+        }
+        header p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin: 50px 0;
+        }
+        .section h2 {
+            font-size: 2em;
+            color: #4A90E2;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #4A90E2;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact-info a, .contact-info p {
+            color: #4A90E2;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Portfolio</h2>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#coursework">Coursework</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Awards & Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Chandra Harika's Portfolio</h1>
+            <p>Welcome to my professional portfolio, which highlights my academic journey, skills, and experiences.</p>
+        </header>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <h2>Profile</h2>
+            <p>
+                <strong>Name:</strong> Chandra Harika<br>
+                <strong>Date of Birth:</strong> 20-02-2005<br>
+                <strong>Place:</strong> Chittoor, Andhra Pradesh<br>
+                <strong>Address:</strong> 3-583/3, Greamspet, Chittoor, AP<br>
+                <strong>Phone:</strong> 8712113389<br>
+                <strong>Email:</strong> <a href="mailto:harikaaa02@gmail.com">harikaaa02@gmail.com</a><br>
+                <strong>Nationality:</strong> Indian<br>
+                <strong>Languages Known:</strong> Telugu (Native), Tamil (Fluent), English (Proficient), Hindi (Intermediate)
+            </p>
+            <p>I am a second-year student at SRM University, Kattankulathur, pursuing my passion for technology and software development. I have a strong interest in Data Structures and Algorithms and continuously seek opportunities to enhance my skills through practical experience. In addition to my academic pursuits, I participate in hackathons and workshops to gain hands-on experience, collaborate with peers, and stay up-to-date with the latest trends in the tech industry. I am committed to continuous learning and aspire to make a meaningful impact in my field.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Programming Languages</h3>
+                    <p>Java, C++, C, with a solid understanding of core concepts and practical experience in projects.</p>
+                </div>
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript - knowledgeable in concepts and practices for building interactive websites.</p>
+                </div>
+                <div class="card">
+                    <h3>Database Management</h3>
+                    <p>Proficient in MySQL, capable of structuring and optimizing databases for enhanced application performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coursework Section -->
+        <section id="coursework" class="section">
+            <h2>Coursework</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Introduction to Java</h3>
+                    <p>NPTEL course by Prof. Debasis Samanta, IIT Kharagpur</p>
+                </div>
+                <div class="card">
+                    <h3>C++ Programming</h3>
+                    <p>NPTEL course covering in-depth concepts of C++.</p>
+                </div>
+                <div class="card">
+                    <h3>C Programming</h3>
+                    <p>Udemy course providing a comprehensive introduction to C programming.</p>
+                </div>
+                <div class="card">
+                    <h3>Data Structures and Algorithms</h3>
+                    <p>Currently enrolled in a course on Data Structures and Algorithms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>WiseGuard</h3>
+                    <p>Developing a project called WiseGuard, aimed at providing innovative care solutions for the elderly.</p>
+                </div>
+                <div class="card">
+                    <h3>NexMart</h3>
+                    <p>A Java Swing application for a grocery store, allowing users to view items, add them to a cart, and process payments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Achievements Section -->
+        <section id="achievements" class="section">
+            <h2>Awards & Achievements</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>School House Captain</h3>
+                    <p>Demonstrated leadership and responsibility.</p>
+                </div>
+                <div class="card">
+                    <h3>ISKON Drawing Competition</h3>
+                    <p>Won prizes at the state level.</p>
+                </div>
+                <div class="card">
+                    <h3>Elocution Competitions</h3>
+                    <p>Received prizes for outstanding performances.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>For inquiries or collaboration opportunities, feel free to reach out:</p>
+                <a href="mailto:harikaaa02@gmail.com">Email Me</a>
+                <p>Phone: 8712113389</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Chandra Harika. All rights reserved.</p>
+            <p>Email: <a href="mailto:harikaaa02@gmail.com">harikaaa02@gmail.com</a></p>
+        </footer>
+    </div>
+</body>
+</html>
